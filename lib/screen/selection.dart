@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:major_vcare/screen/testing.dart';
 
+import 'Credentials/signin.dart';
+
 class SelectionScreen extends StatelessWidget {
   const SelectionScreen({Key? key}) : super(key: key);
 
@@ -18,7 +20,7 @@ class SelectionScreen extends StatelessWidget {
           ),
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.all(20.0),
+       padding: const EdgeInsets.all(20.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -53,7 +55,13 @@ class SelectionScreen extends StatelessWidget {
                     ),
                   ),
                   GestureDetector(
-                    // onTap: (){},
+                     onTap: (){ Navigator.of(context).push(
+                       MaterialPageRoute(
+                         builder: (context) {
+                           return Signin(); // Replace 'SecondScreen' with your next screen.
+                         },
+                       ),
+                     );},
                     child: SizedBox(
                       height: MediaQuery.of(context).size.height * .3,
                       width: MediaQuery.of(context).size.width * .4,

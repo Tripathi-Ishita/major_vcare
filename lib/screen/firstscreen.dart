@@ -9,7 +9,6 @@ class FirstScreen extends StatefulWidget {
 }
 
 class _FirstScreenState extends State<FirstScreen> {
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,10 +17,12 @@ class _FirstScreenState extends State<FirstScreen> {
         body: GestureDetector(
           onVerticalDragEnd: (details) {
             if (details.primaryVelocity! < 0) {
-              Navigator.of(context).pushReplacement(
+
+              // Negative velocity indicates an upward swipe
+              Navigator.of(context).push(
                 MaterialPageRoute(
                   builder: (context) {
-                    return SelectionScreen();
+                    return SelectionScreen(); // Replace 'SecondScreen' with your next screen.
                   },
                 ),
               );
