@@ -11,33 +11,45 @@ class _SigninState extends State<Signin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(mainAxisAlignment: MainAxisAlignment.end, children: [
-        Container(
+      body: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [Colors.white,
+                Color.fromRGBO(129, 71, 255, 1)],
+              stops: [0.1, 1.0],
+            ),
+          ),
+        child: Column(mainAxisAlignment: MainAxisAlignment.end, children: [
+          Container(
+            margin: EdgeInsets.all(20.0),
+            padding: EdgeInsets.all(5.0),
+            child: TextField(
+              decoration: InputDecoration(labelText: "User name",
+              border: OutlineInputBorder(borderRadius: BorderRadius.circular(20))),
+            ),
+          ),
+          Container(
           margin: EdgeInsets.all(20.0),
           padding: EdgeInsets.all(5.0),
-          child: TextField(
-            decoration: InputDecoration(labelText: "User name",
-            border: OutlineInputBorder(borderRadius: BorderRadius.circular(20))),
+            child: TextField(
+              decoration: InputDecoration(labelText: "Password",
+                  border: OutlineInputBorder(borderRadius: BorderRadius.circular(20))),
+            ),
           ),
-        ),
-        Container(
-        margin: EdgeInsets.all(20.0),
-        padding: EdgeInsets.all(5.0),
-          child: TextField(
-            decoration: InputDecoration(labelText: "Password",
-                border: OutlineInputBorder(borderRadius: BorderRadius.circular(20))),
-          ),
-        ),
-        ElevatedButton(
-          style: ElevatedButton.styleFrom(
-            primary: Color.fromRGBO(129, 71, 255, 1.0)
-          ),
-            onPressed: () {},
-            child: Text(
-              "Sign-in",
-              style: TextStyle(fontSize: 20, fontFamily: "Itim"),
-            ))
-      ]),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              primary: Color.fromRGBO(129, 71, 255, 1.0)
+            ),
+              onPressed: () {},
+              child: Text(
+                "Sign-in",
+                style: TextStyle(fontSize: 20, fontFamily: "Itim"),
+              )),
+
+        ]),
+      ),
     );
   }
 }
