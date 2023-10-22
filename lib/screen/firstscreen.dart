@@ -9,17 +9,6 @@ class FirstScreen extends StatefulWidget {
 }
 
 class _FirstScreenState extends State<FirstScreen> {
-  void navigateToNextScreen() {
-    // Replace this with the code to navigate to your next screen.
-    // You can use Navigator to push the next screen onto the stack.
-    Navigator.of(context).push(
-      MaterialPageRoute(
-        builder: (context) {
-          return SelectionScreen(); // Replace 'SecondScreen' with your next screen.
-        },
-      ),
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -29,8 +18,13 @@ class _FirstScreenState extends State<FirstScreen> {
         body: GestureDetector(
           onVerticalDragEnd: (details) {
             if (details.primaryVelocity! < 0) {
-              // Negative velocity indicates an upward swipe
-              navigateToNextScreen();
+              Navigator.of(context).pushReplacement(
+                MaterialPageRoute(
+                  builder: (context) {
+                    return SelectionScreen();
+                  },
+                ),
+              );
             }
           },
           child: Stack(
@@ -82,24 +76,10 @@ class _FirstScreenState extends State<FirstScreen> {
                 child: Image(
                   image: AssetImage("assets/doc.png"),
                 ),
-              )
+              ),
             ],
           ),
         ),
-      ),
-    );
-  }
-}
-
-class SecondScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Second Screen'),
-      ),
-      body: Center(
-        child: Text('This is the second screen.'),
       ),
     );
   }

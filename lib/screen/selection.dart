@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:major_vcare/screen/testing.dart';
 
 class SelectionScreen extends StatelessWidget {
   const SelectionScreen({Key? key}) : super(key: key);
@@ -17,14 +18,15 @@ class SelectionScreen extends StatelessWidget {
           ),
           Expanded(
             child: Padding(
-
-              padding: const EdgeInsets.all(50.0),
-
+              padding: const EdgeInsets.all(20.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   GestureDetector(
-                    onTap: (){},
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Testing()));
+                    },
                     child: SizedBox(
                       height: MediaQuery.of(context).size.height * .3,
                       width: MediaQuery.of(context).size.width * .4,
@@ -35,7 +37,7 @@ class SelectionScreen extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Image(
-                              height: MediaQuery.of(context).size.height*0.2,
+                              height: MediaQuery.of(context).size.height * 0.2,
                               image: AssetImage(
                                   "assets/patient.png"), // Replace with the patient image pathAdjust the height as needed
                             ),
@@ -62,7 +64,7 @@ class SelectionScreen extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Image(
-                              height: MediaQuery.of(context).size.height*0.2,
+                              height: MediaQuery.of(context).size.height * 0.2,
                               image: AssetImage(
                                   "assets/doctor.png"), // Replace with the doctor image path
                             ),
