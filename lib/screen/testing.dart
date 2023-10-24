@@ -6,17 +6,18 @@ class Testing extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [Colors.white,
-              Color.fromRGBO(129, 71, 255, 1)],
-            stops: [0.1, 1.0],
+      body: Stack(
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.circular(500),
+            child: Container(
+              height: MediaQuery.of(context).size.height*0.3,
+              width: MediaQuery.of(context).size.width*0.6,
+              color: Color.fromRGBO(129, 71, 255, 1.0),
+
+            ),
           ),
-        ),
-        // Add your other content here
+        ],
       ),
     );
   }
