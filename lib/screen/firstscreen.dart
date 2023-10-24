@@ -19,7 +19,7 @@ class _FirstScreenState extends State<FirstScreen> {
             if (details.primaryVelocity! < 0) {
 
               // Negative velocity indicates an upward swipe
-              Navigator.of(context).push(
+              Navigator.of(context).pushReplacement(
                 MaterialPageRoute(
                   builder: (context) {
                     return SelectionScreen(); // Replace 'SecondScreen' with your next screen.
