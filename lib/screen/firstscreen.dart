@@ -9,8 +9,6 @@ class FirstScreen extends StatefulWidget {
 }
 
 class _FirstScreenState extends State<FirstScreen> {
-
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,6 +17,7 @@ class _FirstScreenState extends State<FirstScreen> {
         body: GestureDetector(
           onVerticalDragEnd: (details) {
             if (details.primaryVelocity! < 0) {
+
               // Negative velocity indicates an upward swipe
               Navigator.of(context).push(
                 MaterialPageRoute(
@@ -78,24 +77,10 @@ class _FirstScreenState extends State<FirstScreen> {
                 child: Image(
                   image: AssetImage("assets/doc.png"),
                 ),
-              )
+              ),
             ],
           ),
         ),
-      ),
-    );
-  }
-}
-
-class SecondScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Second Screen'),
-      ),
-      body: Center(
-        child: Text('This is the second screen.'),
       ),
     );
   }
