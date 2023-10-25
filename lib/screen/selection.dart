@@ -34,6 +34,28 @@ class SelectionScreen extends StatelessWidget {
               ),
             ),
             Positioned(
+                bottom: -20,
+                left: -40,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(500),
+                  child: Container(
+                    height: MediaQuery.of(context).size.height * .15,
+                    width: MediaQuery.of(context).size.width * 0.3,
+                    color: Colors.deepPurple,
+                  ),
+                )),
+            Positioned(
+                bottom: -20,
+                left: 50,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(500),
+                  child: Container(
+                    height: MediaQuery.of(context).size.height * 0.09,
+                    width: MediaQuery.of(context).size.width * 0.18,
+                    color: Color.fromRGBO(129, 71, 255, 1.0),
+                  ),
+                )),
+            Positioned(
               bottom: 0,
               left: 0,
               right: 0,
@@ -124,28 +146,7 @@ class SelectionScreen extends StatelessWidget {
                 ),
               ),
             ),
-            Positioned(
-                bottom: -20,
-                left: -40,
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(500),
-                  child: Container(
-                    height: MediaQuery.of(context).size.height * .15,
-                    width: MediaQuery.of(context).size.width * 0.3,
-                    color: Colors.deepPurple,
-                  ),
-                )),
-            Positioned(
-                bottom: 40,
-                left: 80,
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(500),
-                  child: Container(
-                    height: MediaQuery.of(context).size.height * 0.09,
-                    width: MediaQuery.of(context).size.width * 0.18,
-                    color: Colors.deepPurple,
-                  ),
-                )),
+
           ],
         ),
       ),
