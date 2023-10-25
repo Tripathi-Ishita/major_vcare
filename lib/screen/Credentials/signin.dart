@@ -9,18 +9,10 @@ class Signin extends StatefulWidget {
 }
 
 class _SigninState extends State<Signin> with SingleTickerProviderStateMixin {
-  final emailController = TextEditingController();
-  final phoneController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
   bool isLoading = true;
   late TabController tabController;
 
-  @override
-  void dispose() {
-    emailController.dispose();
-    phoneController.dispose();
-    super.dispose();
-  }
 
   @override
   void initState() {
