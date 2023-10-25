@@ -22,7 +22,7 @@ class _FirstScreenState extends State<FirstScreen> {
               Navigator.of(context).pushReplacement(
                 MaterialPageRoute(
                   builder: (context) {
-                    return SelectionScreen(); // Replace 'SecondScreen' with your next screen.
+                    return const SelectionScreen(); // Replace 'SecondScreen' with your next screen.
                   },
                 ),
               );
@@ -39,11 +39,12 @@ class _FirstScreenState extends State<FirstScreen> {
               Row(
                 children: [
                   Container(
-                    padding: EdgeInsets.only(left: 40, bottom: 300),
-                    child: Container(
+                    padding: const EdgeInsets.only(left: 40, bottom: 300),
+                    alignment: Alignment.center,
+                    child: SizedBox(
                       height: MediaQuery.of(context).size.height * 0.3,
                       width: MediaQuery.of(context).size.width * 0.8,
-                      child: Column(
+                      child: const Column(
                         children: [
                           Text(
                             "Feel The "
@@ -66,7 +67,6 @@ class _FirstScreenState extends State<FirstScreen> {
                         ],
                       ),
                     ),
-                    alignment: Alignment.center,
                   ),
                 ],
               ),
@@ -74,8 +74,14 @@ class _FirstScreenState extends State<FirstScreen> {
                 bottom: 0,
                 right: 0,
                 left: 0,
-                child: Image(
-                  image: AssetImage("assets/doc.png"),
+                child: SizedBox(
+                  height: MediaQuery.of(context).size.height*.5,
+                  width: MediaQuery.of(context).size.width*.8,
+                  child: Image(
+                    image: const AssetImage("assets/doc.png"),
+                    width: MediaQuery.of(context).size.width*.8,
+                    height: MediaQuery.of(context).size.height*.5,
+                  ),
                 ),
               ),
             ],
