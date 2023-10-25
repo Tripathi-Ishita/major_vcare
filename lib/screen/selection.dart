@@ -34,15 +34,26 @@ class SelectionScreen extends StatelessWidget {
               ),
             ),
             Positioned(
-                bottom: 20,
-                left: 80,
+
+                bottom: -20,
+                left: -40,
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(500),
                   child: Container(
-                    clipBehavior: Clip.none,
-                    height: MediaQuery.of(context).size.height * 0.1,
-                    width: MediaQuery.of(context).size.width * 0.2,
+                    height: MediaQuery.of(context).size.height * .15,
+                    width: MediaQuery.of(context).size.width * 0.3,
                     color: Colors.deepPurple,
+                  ),
+                )),
+            Positioned(
+                bottom: -20,
+                left: 50,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(500),
+                  child: Container(
+                    height: MediaQuery.of(context).size.height * 0.09,
+                    width: MediaQuery.of(context).size.width * 0.18,
+                    color: Color.fromRGBO(129, 71, 255, 1.0),
                   ),
                 )),
             Positioned(
@@ -139,6 +150,7 @@ class SelectionScreen extends StatelessWidget {
                 ),
               ),
             ),
+
             Positioned(
                 bottom: -20,
                 left: -40,
@@ -150,6 +162,7 @@ class SelectionScreen extends StatelessWidget {
                     color: Colors.deepPurple,
                   ),
                 )),
+
 
           ],
         ),
