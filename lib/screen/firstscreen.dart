@@ -74,8 +74,14 @@ class _FirstScreenState extends State<FirstScreen> {
                 bottom: 0,
                 right: 0,
                 left: 0,
-                child: Image(
-                  image: AssetImage("assets/doc.png"),
+                child: SizedBox(
+                  height: MediaQuery.of(context).size.height*.5,
+                  width: MediaQuery.of(context).size.width*.8,
+                  child: Image(
+                    image: AssetImage("assets/doc.png"),
+                    width: MediaQuery.of(context).size.width*.8,
+                    height: MediaQuery.of(context).size.height*.5,
+                  ),
                 ),
               ),
             ],
