@@ -3,76 +3,65 @@ import 'package:flutter/material.dart';
 class Testing extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color.fromRGBO(133, 8, 248, 1),
-        title: Text('Home Page'),
-      ),
-      drawer: Drawer(
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            children: [
+              Container(
+                height: MediaQuery.of(context).size.height * 0.35,
+                width: MediaQuery.of(context).size.width * 0.98,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30),
+                    image: DecorationImage(
+                        image: AssetImage("assets/p.jpeg"), fit: BoxFit.fill)),
+                child: Padding(
+                  padding: const EdgeInsets.all(25.0),
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          Column(
+                            children: [
+                              Text("Hi Edria!",style: TextStyle(
+                                color: Colors.white,
+                                fontFamily: "Itim"
+                                  ,fontSize: 25,fontWeight: FontWeight.bold
+                              ),),
+                              Text("How do you feel today?",style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontFamily: "Itim"
+                              ),)
+                            ],
+                          ),
+                          IconButton(onPressed: (){}, icon:Icon(Icons.add_alert_sharp,color: Colors.white,))
+                        ],
+                      ),
+                      TextField(
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(),
+                          hintText: "Search Doctor, Health issues..."
+                        ),
+                      ),
+                      Row(
+                        children: [
+                          IconButton(onPressed: (){}, icon:Icon(Icons.add_alert_sharp,color: Colors.white,)),
+                          IconButton(onPressed: (){}, icon:Icon(Icons.add_alert_sharp,color: Colors.white,)),
+                          IconButton(onPressed: (){}, icon:Icon(Icons.add_alert_sharp,color: Colors.white,)),
+                          IconButton(onPressed: (){}, icon:Icon(Icons.add_alert_sharp,color: Colors.white,)),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
 
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            UserAccountsDrawerHeader(
-              decoration: BoxDecoration(
-                color: Color.fromRGBO(133, 8, 248, 1),
               ),
-              accountName: Text('John Doe'),
-              accountEmail: Text('johndoe@example.com'),
-              currentAccountPicture: CircleAvatar(
-                backgroundColor: Colors.white,
-                child: Icon(
-                  Icons.person,
-                  size: 50,
-                  color: Colors.blue,
-                ),
-              ),
-            ),
-            ListTile(
-              leading: Icon(Icons.home),
-              title: Text('Home'),
-              onTap: () {
-                // Handle home drawer item click
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.search),
-              title: Text('Search'),
-              onTap: () {
-                // Handle search drawer item click
-              },
-            ),
-            // Add more drawer items as needed
-          ],
+            ],
+          ),
         ),
-      ),
-      body: Column(
-        children: [
-          Padding(
-            padding: EdgeInsets.all(16),
-            child: TextField(
-              decoration: InputDecoration(
-                hintText: 'Search...',
-                prefixIcon: Icon(Icons.search),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                ),
-              ),
-              // Implement search functionality here
-            ),
-          ),
-          Expanded(
-            child: ListView.builder(
-              itemCount: 10, // Replace with your data length
-              itemBuilder: (context, index) {
-                return ListTile(
-                  title: Text('Item $index'),
-                  // Implement list item onTap action here
-                );
-              },
-            ),
-          ),
-        ],
       ),
     );
   }
