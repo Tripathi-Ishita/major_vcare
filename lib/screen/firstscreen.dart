@@ -71,11 +71,11 @@ class _FirstScreenState extends State<FirstScreen> {
                 ],
               ),
               Positioned(
-                bottom: 0,
+                bottom: -30,
                 right: 0,
                 left: 0,
                 child: SizedBox(
-                  height: MediaQuery.of(context).size.height*.5,
+                  height: MediaQuery.of(context).size.height*.6,
                   width: MediaQuery.of(context).size.width*.8,
                   child: Image(
                     image: const AssetImage("assets/doc.png"),
@@ -91,3 +91,5 @@ class _FirstScreenState extends State<FirstScreen> {
     );
   }
 }
+
+
