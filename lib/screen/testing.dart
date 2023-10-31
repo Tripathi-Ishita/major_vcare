@@ -11,14 +11,14 @@ class Testing extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                height: MediaQuery.of(context).size.height * 0.3,
+                height: MediaQuery.of(context).size.height * 0.4,
                 width: MediaQuery.of(context).size.width * 0.98,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
                     image: DecorationImage(
                         image: AssetImage("assets/p.jpeg"), fit: BoxFit.fill)),
                 child: Padding(
-                  padding: const EdgeInsets.all(25.0),
+                  padding: const EdgeInsets.all(20.0),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -45,23 +45,27 @@ class Testing extends StatelessWidget {
                             ],
                           ),
                           SizedBox(
-                            width: MediaQuery.of(context).size.width * .35,
+                            width: MediaQuery.of(context).size.width * .19,
                           ),
-                          Container(
-                            height: MediaQuery.of(context).size.height * .05,
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                primary: Colors.white.withOpacity(0.5),
+                          ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              fixedSize: const Size(50, 50),
+                              shape:  RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15.0),
                               ),
-                              child: Icon(Icons.notifications),
-                              onPressed: () {},
+                              primary: Colors.white.withOpacity(0.5),
                             ),
+                            child: Icon(Icons.notifications),
+                            onPressed: () {},
                           ),
                         ],
                       ),
                       TextField(
                         decoration: InputDecoration(
-                            border: OutlineInputBorder(
+                            enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  width: 3,
+                                  color: Colors.white.withOpacity(0.2)),
                               borderRadius: BorderRadius.circular(15)
                             ),
                             filled: true,
@@ -69,71 +73,59 @@ class Testing extends StatelessWidget {
                             hintText: "Search Doctor, Health issues..."),
                       ),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Container(
-                            height: MediaQuery.of(context).size.height * .08,
-                            width: MediaQuery.of(context).size.width*.15,
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                primary: Colors.white.withOpacity(0.6),
+                          ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              fixedSize: const Size(70, 70),
+                              shape:  RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15.0),
                               ),
-                              child: Icon(Icons.notifications,
+                              primary: Colors.white.withOpacity(0.6),
+                            ),
+                            child: Icon(Icons.notifications,
+                            size: 40,
+                            ),
+                            onPressed: () {},
+                          ),
+                          ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              fixedSize: const Size(70, 70),
+                              shape:  RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15.0),
+                              ),
+                              primary: Colors.white.withOpacity(0.6),
+                            ),
+                            child: Icon(Icons.notifications,
                               size: 40,
-                              ),
-                              onPressed: () {},
                             ),
+                            onPressed: () {},
                           ),
-                          Container(
-                            height: MediaQuery.of(context).size.height * .08,
-                            width: MediaQuery.of(context).size.width*.15,
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                primary: Colors.white.withOpacity(0.6),
+                          ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              fixedSize: const Size(70, 70),
+                              shape:  RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15.0),
                               ),
-                              child: Icon(Icons.notifications,
-                                size: 40,
-                              ),
-                              onPressed: () {},
+                              primary: Colors.white.withOpacity(0.6),
                             ),
+                            child: Icon(Icons.notifications,
+                              size: 40,
+                            ),
+                            onPressed: () {},
                           ),
-                          Container(
-                            height: MediaQuery.of(context).size.height * .08,
-                            width: MediaQuery.of(context).size.width*.15,
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                primary: Colors.white.withOpacity(0.6),
+                          ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              fixedSize: const Size(70, 70),
+                              shape:  RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15.0),
                               ),
-                              child: Icon(Icons.notifications,
-                                size: 40,
-                              ),
-                              onPressed: () {},
+                              primary: Colors.white.withOpacity(0.6),
                             ),
-                          ),
-                          Container(
-                            height: MediaQuery.of(context).size.height * .08,
-                            width: MediaQuery.of(context).size.width*.15,
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                primary: Colors.white.withOpacity(0.6),
-                              ),
-                              child: Icon(Icons.notifications,
-                                size: 40,
-                              ),
-                              onPressed: () {},
+                            child: Icon(Icons.notifications,
+                              size: 40,
                             ),
-                          ),Container(
-                            height: MediaQuery.of(context).size.height * .08,
-                            width: MediaQuery.of(context).size.width*.15,
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                primary: Colors.white.withOpacity(0.6),
-                              ),
-                              child: Icon(Icons.notifications,
-                                size: 40,
-                              ),
-                              onPressed: () {},
-                            ),
+                            onPressed: () {},
                           ),
                         ],
                       )
