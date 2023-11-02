@@ -9,7 +9,6 @@ class Testing extends StatelessWidget {
         body: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Container(
                 height: MediaQuery.of(context).size.height * 0.4,
@@ -134,8 +133,21 @@ class Testing extends StatelessWidget {
                   ),
                 ),
               ),
-              Container(
-                height: MediaQuery.of(context).size.height * 0.3,
+              Row(
+                children: [
+                  Text("Upcoming Schedule",style: TextStyle(color: Colors.black,
+                  fontSize: 20,
+                  fontFamily: "Itim"),),
+                  SizedBox(
+                   width: MediaQuery.of(context).size.width*0.3,
+                  )
+                  ,TextButton(onPressed: (){}, child: Text(
+                    "View all",style: TextStyle(color: Colors.grey,fontSize: 17,fontFamily: "Itim"),
+                  ))
+                ],
+              )
+              ,Container(
+                height: MediaQuery.of(context).size.height * 0.25,
                 width: MediaQuery.of(context).size.width * 0.98,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
